@@ -1,0 +1,35 @@
+{% extends 'agents_webapp/base.html' %}
+{% load static %}
+{% block title %}Login{% endblock title %}
+{% block main-content %}
+<div class="container">
+ <div class="row my-3">
+  <div class="col-sm-6 offset-sm-3">
+      <div class="center">
+
+          <h3>Login</h3>
+      </div>
+   <hr>
+   <form action="" method="post" novalidate class="shadow p-5">
+    {% csrf_token %}
+    {% for fm in form %} <!--this form coming from LoginView because haven't created such form-->
+    <div class="form-group">
+        {{fm.label_tag}} {{fm}}
+        <small class="text-danger">
+            {{fm.errors|striptags}}
+        </small>
+        <br>
+    </div>
+    {% endfor %}
+    <br>
+    {% if form.non_field_errors %}
+        {% for error in form.non_field_errors %}
+            <p class="alert alert-danger my-3">{{error}}</p>
+        {% endfor %}
+    {% endif %}
+    <input type="submit" value="login" class="btn btn-primary mt-4">
+   </form>
+  </div>
+ </div>
+</div>
+{% endblock main-content %}
