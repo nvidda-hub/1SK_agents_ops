@@ -1,13 +1,11 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
 
-def login(request):
-    return render(request, 'agents_webapp/login.html')
 
 @login_required
-def home(request):
+def dashboard(request):
     print(request.user.is_authenticated)
-    return render(request, 'agents_webapp/home.html')
+    return render(request, 'agents_webapp/dashboard.html')
