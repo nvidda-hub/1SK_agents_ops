@@ -7,4 +7,5 @@ app_name = "agents_webapp"
 
 urlpatterns = [
     path('', auth_views.LoginView.as_view(template_name='agents_webapp/login.html', authentication_form=LoginForm), name='login'),
+    path('home/', views.home, name="home"),
 ]
