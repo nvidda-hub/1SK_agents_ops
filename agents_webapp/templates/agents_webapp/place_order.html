@@ -1,0 +1,64 @@
+{% extends 'agents_webapp/base.html' %}
+{% load static %}
+{% block title %}Dashboard{% endblock title %}
+{% block page-content %}
+<form method="post" action="">
+    {% csrf_token %}
+    <div class="container">
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+          <label for="mobileUser" class="col-form-label">Mobile</label>
+        </div>
+        <div class="col-auto ml-5">
+          <input type="number" id="mobileUser" class="form-control" aria-describedby="mobileHelpInline" placeholder="Enter mobile number without +91 or 0">
+        </div>
+      </div>
+      <div class="row g-3 align-items-center mt-3">
+        <div class="col-auto">
+          <label for="locationInfo" class="col-form-label">Location Info</label>
+        </div>
+        <div class="col-auto">
+          <input type="text" id="locationInfo" class="form-control" aria-describedby="locationHelpInline">
+        </div>
+      </div>
+      <div class="container ml-5">
+    <button type="submit" class="btn btn-primary mt-3">Search</button>
+</div>
+    </div>
+  </form>
+  <div class="line"></div>
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Category</th>
+        <th scope="col">Product</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Mark</td>
+        <td>Otto</td>
+        <td>@mdo</td>
+        <td>@mdo</td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td>
+      </tr>
+    </tbody>
+  </table>
+</div>​
+{% endblock page-content %}

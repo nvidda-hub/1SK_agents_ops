@@ -120,7 +120,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
-LOGIN_REDIRECT_URL = '/dashboard/'    # after login user will be redirected to .../profile/
+LOGIN_REDIRECT_URL = '/dashboard/'    # after login user will be redirected to .../dashboard/
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'  # just to check email link in console
 
 

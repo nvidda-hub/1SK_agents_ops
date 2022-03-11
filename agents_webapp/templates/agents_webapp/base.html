@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
@@ -33,7 +34,7 @@
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orders</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Place a Order</a>
+                            <a href="{% url 'agents_webapp:place_order' %}">Place a Order</a>
                         </li>
                         <li>
                             <a href="#">Orders</a>
@@ -77,7 +78,7 @@
 
             <ul class="list-unstyled CTAs">
                 <li>
-                    <a href="#" class="download">Logout</a>
+                    <a href="{% url 'agents_webapp:logout' %}">Logout</a>                 
                 </li>
                 <li>
                     <a href="#" class="article">Back to previous</a>
